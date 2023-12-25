@@ -1,0 +1,11 @@
+.quill p,
+.preview {
+  direction: rtl;
+  text-align: start;
+  font-size: medium !important;
+  width: 100%;
+}
+
+.quill textarea {
+  min-height: 30vh;
+}
