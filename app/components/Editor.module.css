@@ -2,7 +2,7 @@
 .preview {
   direction: rtl;
   text-align: start;
-  font-size: medium !important;
+  font-size: medium;
   width: 100%;
 }
 

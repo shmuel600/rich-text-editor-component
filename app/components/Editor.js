@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import ReactQuill from 'react-quill';
-import styles from '../page.module.css'
+import styles from './Editor.module.css'
 import 'react-quill/dist/quill.snow.css';
 
 const RichTextEditor = () => {
@@ -15,7 +15,11 @@ const RichTextEditor = () => {
             ['bold', 'italic', 'underline', 'strike'],
             ['link', 'image'],
             [{ 'color': [] }],
-            [{ 'align': [] }],
+            [
+                { 'align': 'justify' },
+                { 'align': 'center' },
+                { 'align': 'right' },
+            ],
             // [{ 'direction': 'rtl' }],
         ],
     };
@@ -33,7 +37,6 @@ const RichTextEditor = () => {
     return (
         <>
             <div
-                style={{ width: '100%' }}
                 className={styles.quill}
             >
                 {/* when in edit mode */}
@@ -44,7 +47,7 @@ const RichTextEditor = () => {
                     value={content}
                     onChange={setContent}
                     style={{ height: '60vh', marginBottom: '7vh' }}
-                    className='.ql-align-right'
+                // className='.ql-align-right, .ql-direction-rtl'
                 />
             </div>
             {/* when not in edit mode */}
