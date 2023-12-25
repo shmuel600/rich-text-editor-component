@@ -1,4 +1,3 @@
-import RichTextEditorHe from './components/RichTextEditorHe'
 import RichTextEditor from './components/Editor'
 import styles from './page.module.css'
 
