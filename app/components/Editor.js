@@ -57,7 +57,7 @@ const RichTextEditor = () => {
                     console.log(content
                         .replaceAll(`class="ql-align-center"`, `style="textAlign: center;"`)
                         .replaceAll(`class="ql-align-right"`, `style="textAlign: right;"`)
-                        .replaceAll(`class="ql-align-left"`, `style="textAlign: left;"`)
+                        // .replaceAll(`class="ql-align-left"`, `style="textAlign: left;"`)
 
                         .replaceAll(`class="ql-size-small"`, `style="fontSize: small;"`)
                         .replaceAll(`class="ql-size-large"`, `style="fontSize: large;"`)
@@ -73,7 +73,7 @@ const RichTextEditor = () => {
 
                         .replaceAll(`class="ql-align-center"`, `style="text-align: center;"`)
                         .replaceAll(`class="ql-align-right"`, `style="text-align: right;"`)
-                        .replaceAll(`class="ql-align-left"`, `style="text-align: left;"`)
+                        // .replaceAll(`class="ql-align-left"`, `style="text-align: left;"`)
 
                         .replaceAll(`class="ql-size-small"`, `style="font-size: small;"`)
                         .replaceAll(`class="ql-size-large"`, `style="font-size: x-large;"`)
