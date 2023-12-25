@@ -16,7 +16,8 @@ const RichTextEditor = () => {
             ['link', 'image'],
             [{ 'color': [] }],
             [
-                { 'align': 'justify' },
+                // { 'align': [false] },
+                // { 'align': 'justify' },
                 { 'align': 'center' },
                 { 'align': 'right' },
             ],
@@ -51,12 +52,34 @@ const RichTextEditor = () => {
                 />
             </div>
             {/* when not in edit mode */}
-            <button onClick={() => console.log(content)}>
+            <button
+                onClick={() =>
+                    console.log(content
+                        .replaceAll(`class="ql-align-center"`, `style="textAlign: center;"`)
+                        .replaceAll(`class="ql-align-right"`, `style="textAlign: right;"`)
+                        .replaceAll(`class="ql-align-left"`, `style="textAlign: left;"`)
+
+                        .replaceAll(`class="ql-size-small"`, `style="fontSize: small;"`)
+                        .replaceAll(`class="ql-size-large"`, `style="fontSize: large;"`)
+                        .replaceAll(`class="ql-size-huge"`, `style="fontSize: larger;"`)
+                    )}
+            >
                 log
             </button>
             <div
                 className={styles.preview}
-                dangerouslySetInnerHTML={{ __html: content }}
+                dangerouslySetInnerHTML={{
+                    __html: content
+
+                        .replaceAll(`class="ql-align-center"`, `style="text-align: center;"`)
+                        .replaceAll(`class="ql-align-right"`, `style="text-align: right;"`)
+                        .replaceAll(`class="ql-align-left"`, `style="text-align: left;"`)
+
+                        .replaceAll(`class="ql-size-small"`, `style="font-size: small;"`)
+                        .replaceAll(`class="ql-size-large"`, `style="font-size: x-large;"`)
+                        .replaceAll(`class="ql-size-huge"`, `style="font-size: xx-large;"`)
+
+                }}
             >
             </div>
         </>
