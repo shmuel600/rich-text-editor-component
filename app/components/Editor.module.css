@@ -14,27 +14,3 @@
 .quill textarea {
   min-height: 30vh;
 }
-
-.center {
-  text-align: center;
-}
-
-.right {
-  text-align: right;
-}
-
-.left {
-  text-align: left;
-}
-
-.small {
-  font-size: small;
-}
-
-.large {
-  font-size: large;
-}
-
-.huge {
-  font-size: xx-large;
-}
